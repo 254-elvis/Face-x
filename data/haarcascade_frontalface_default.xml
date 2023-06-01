@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opencv_storage>
+<cascade>
+   <stageType>BOOST</stageType>
+   <featureType>HAAR</featureType>
+   <height>24</height>
+   <width>24</width>
+   <stageParams>
+     <boostType>GAB</boostType>
+     <minHitRate>0.995</minHitRate>
+     <maxFalseAlarmRate>0.5</maxFalseAlarmRate>
+     <weightTrimRate>0.95</weightTrimRate>
+     <maxDepth>1</maxDepth>
+   </stageParams>
+   <featureParams>
+     <maxCatCount>256</maxCatCount>
+     <featSize>1</featSize>
+     <mode>HAAR</mode>
+   </featureParams>
+   <stageNum>25</stageNum>
+   <stages>
+     <!-- Stage 0 -->
+     <_>
+       <maxWeakCount>2</maxWeakCount>
+       <stageThreshold>-0.5637140278816223</stageThreshold>
+       <weakClassifiers>
+         <!-- Classifier 0.0 -->
+         <_>
+           <internalNodes>
+             0 -1 5 -3633 7698 -28259</internalNodes>
+           <leafValues>
+             -0.5982249970436096 0.5977999567985535</leafValues></_>
+         <!-- Classifier 0.1 -->
+         <_>
+           <internalNodes>
+             0 -1 3 -1693 -1 -1</internalNodes>
+           <leafValues>
+             0.3290905950069427 -0.3191206154823303</leafValues></_></weakClassifiers></_>
+     <!-- Stage 1 -->
+     <_>
+       <maxWeakCount>2</maxWeakCount>
+       <stageThreshold>-0.4438928961753845</stageThreshold>
+       <weakClassifiers>
+         <!-- Classifier 1.0 -->
+         <_>
+           <internalNodes>
+             0 -1 9 -4902 14562 -17869</internalNodes>
+           <leafValues>
+             -0.6313716769218445 0.6018412709236145</leafValues></_>
+         <!-- Classifier 1.1 -->
+         <_>
+           <internalNodes>
+             0 -1 5 -583 -1 -1</internalNodes>
+           <leafValues>
+             -0.1449200956821442 0.4318065044879913</leafValues></_></weakClassifiers></_>
+     <!-- More stages... -->
+   </stages>
+ </cascade>
+</opencv_storage>
