@@ -3,7 +3,7 @@
 # app/routes.py
 from flask import Blueprint, render_template
 from flask import Flask, render_template, request, redirect
-from app.user_interface import UserInterface
+from ui.user_interface import UserInterface
 
 app = Flask(__name__)
 main_routes = Blueprint('main', __name__)
