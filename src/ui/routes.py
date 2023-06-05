@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # app/routes.py
-from database_operations import DatabaseManager
+from app.database_operations import DatabaseManager
 from flask import Blueprint, render_template
 from flask import Flask, render_template, request, redirect
 from ui.user_interface import UserInterface
