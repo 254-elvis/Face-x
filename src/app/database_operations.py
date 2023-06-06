@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
-
+database_url = "mysql+pymysql://facex:Face_x@localhost/face_recognition"
 
 class Face(Base):
     """
