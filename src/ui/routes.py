@@ -8,6 +8,7 @@ from app.user_interface import UserInterface
 
 app = Flask(__name__)
 main_routes = Blueprint('main', __name__)
+database_url = "mysql+pymysql://facex:Face_x@localhost/face_recognition"
 
 # Create an instance of the UserInterface
 database_manager = DatabaseManager(database_url)
