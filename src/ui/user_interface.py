@@ -1,4 +1,11 @@
+#!/usr/bin/python3
+
 # app/user_interface.py
+from app.face_detection import FaceDetector
+from app.face_alignment import FaceAligner
+from app.feature_extraction import FeatureExtractor
+from app.face_recognition import FacialRecognizer
+
 
 class UserInterface:
     """

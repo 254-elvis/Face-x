@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 # app/routes.py
+import os
 from app.database_operations import DatabaseManager
 from flask import Blueprint, render_template
 from flask import Flask, render_template, request, redirect
@@ -10,9 +11,11 @@ app = Flask(__name__)
 main_routes = Blueprint('main', __name__)
 database_url = "mysql+pymysql://facex:Face_x@localhost/face_recognition"
 
+
 # Create an instance of the UserInterface
 database_manager = DatabaseManager(database_url)
 user_interface = UserInterface(database_manager)
+UPLOAD_FOLDER = 'images/uploads'
 
 
 @app.route('/')

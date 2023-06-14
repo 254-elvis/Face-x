@@ -3,8 +3,8 @@
 import cv2
 import dlib
 import numpy as np
-from face_alignment import FaceAlignment
-from face_encoding import FaceEncoder
+from app.face_alignment import FaceAligner
+from app.face_encoding import FaceEncoder
 
 class FacialRecognizer:
     """
