@@ -1,0 +1,16 @@
+<!-- templates/results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facial Recognition Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Facial Recognition Results</h1>
+    <ul>
+        {% for face_id in recognized_faces %}
+            <li>{{ face_id }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
