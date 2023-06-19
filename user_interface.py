@@ -20,19 +20,21 @@ def load_image(image_path):
         numpy.ndarray: The loaded image as a Numpy array
     """
 
-class UserInterface:
+class UserInterface(FacialRecognizer):
     """
     Class for the user interface functionality.
     """
 
-    def __init__(self, database_manager):
+    def __init__(self, shape_predictor_path, database_manager):
         """
         Initializes the UserInterface.
 
         Args:
             database_manager (DatabaseManager): An instance of the DatabaseManager class.
         """
-        self.database_manager = database_manager
+        """self.database_manager = database_manager"""
+        database = database_manager.get_database()
+        super().__init__(shape_predictor_path, database)
 
     def add_face(self, face_id, face_image_path, info=None):
         """
@@ -68,8 +70,21 @@ class UserInterface:
         """
         self.database_manager.update_face(face_id, new_info)
 
+
+    def display_results(self, recognized_faces):
+        """
+        Displays the recognized face IDs.
+
+        Args:
+            recognized_faces (list): A list of recognized face IDs.
+        """
+        for name in recognized_faces:
+            print(f"Recognized face: {name}")
+
+
     def recognize_faces(self, image_path):
         """
+
         Recognizes faces in an image.
 
         Args:
@@ -77,6 +92,7 @@ class UserInterface:
 
         Returns:
             list: A list of recognized face IDs.
+        """
         """
         # Load the image
         image = load_image(image_path)
@@ -106,14 +122,6 @@ class UserInterface:
             recognized_faces.append(face_id)
 
         return recognized_faces
-
-    def display_results(self, recognized_faces):
         """
-        Displays the recognized face IDs.
-
-        Args:
-            recognized_faces (list): A list of recognized face IDs.
-        """
-        for face_id in recognized_faces:
-            print(f"Recognized face: {face_id}")
-
+        image = cv2.imread(image_path)
+        return super().recognize_faces(image)

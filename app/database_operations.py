@@ -40,6 +40,11 @@ class DatabaseManager:
         Base.metadata.create_all(self.engine)
         Session = sessionmaker(bind=self.engine)
         self.session = Session()
+        self.database = database_url
+    
+    def get_database(self):
+        """Returns the database instance"""
+        return self.database
 
     def add_face(self, face_id, face_image, info=None):
         """
