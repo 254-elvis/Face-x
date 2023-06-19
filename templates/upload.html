@@ -1,4 +1,4 @@
-<!-- templates/results.html -->
+<!-- templates/upload.html -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,15 +6,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" >
         <title>Portfolio Setup and Mobile First</title>
-        <title>Facial Recognition Results</title>
+        <title>Upload Training Dataset</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     </head>
     <body>
-        <h1>Facial Recognition Results</h1>
-        <ul>
-            {% for face_id in recognized_faces %}
-                <li>{{ face_id }}</li>
-            {% endfor %}
-        </ul>
+        <h1>Upload Training Dataset</h1>
+        <form action="{{ url_for('process_training') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="files[]" multiple>
+            <input type="submit" value="Upload">
+        </form>
     </body>
 </html>
+
