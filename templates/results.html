@@ -7,14 +7,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" >
         <title>Portfolio Setup and Mobile First</title>
         <title>Facial Recognition Results</title>
+        <link rel="stylsheet" href="static/styles.css">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     </head>
     <body>
+      <div class="main">
         <h1>Facial Recognition Results</h1>
         <ul>
             {% for face_id in recognized_faces %}
                 <li>{{ face_id }}</li>
             {% endfor %}
         </ul>
+      </div>
     </body>
 </html>
