@@ -4,11 +4,9 @@
   <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-      <title>Portfolio Setup and Mobile First</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Facial Recognition System</title>
-      <link rel="stylsheet" href="static/styles.css">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   </head>
   <body>
     <div class="main">
@@ -16,32 +14,35 @@
         <div class="icon"><h2 class="logo">Face X</h2></div>
 
         <div class="menu">
-                <ul>
-                    <li><a href="#">TEAM</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="{{ url_for('upload_training') }}">UPLOAD TRAINING</a></li>
-                </ul>
-            </div>
+            <ul>
+                <li><a href="/team">TEAM</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/services">SERVICES</a></li>
+                <li><a href="/portfolio">PORTFOLIO</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+                <li><a href="/upload_training">UPLOAD TRAINING</a></li>
+            </ul>
+        </div>
 
-            <div class="search">
-                <input class="srch" type="search" name="" placeholder="Enter name or Face Id">
-                <a href="#"> <button class="btn">Search</button></a>
-            </div>
+        <div class="search">
+            <input class="srch" type="search" name="search" placeholder="Enter name or Face Id">
+            <button class="btn">Search</button>
+        </div>
+      </div> 
 
-        </div> 
-        <div class="content">
-            <h1>Face X <br><span>Development</span> <br>And perfection</h1>
-            <p class="par">facial recognition system <br> working hard to detect faces
-                <br> watching that you cannot see</p>
-                <form action="/upload" method="post" enctype="multipart/form-data">
-                    <input type="file" name="file">
-                    <input type="submit" value="Upload">
-                </form>
-                <button class="cn"><a href="#">JOIN US</a></button>
-        </div>        
+      <div class="content">
+          <h1>Face X <br><span>Development</span> <br>And Perfection</h1>
+          <p class="par">
+              Facial recognition system <br> Working hard to detect faces <br> Watching what you cannot see
+          </p>
+
+          <form action="/upload" method="post" enctype="multipart/form-data">
+              <input type="file" name="file">
+              <input type="submit" value="Upload">
+          </form>
+
+          <button class="cn"><a href="/join">JOIN US</a></button>
+      </div>        
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
